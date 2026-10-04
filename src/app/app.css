@@ -1,0 +1,41 @@
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+form {
+  width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+h2 {
+  text-align: center;
+}
+
+p {
+  width: 400px;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+}

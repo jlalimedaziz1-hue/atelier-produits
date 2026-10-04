@@ -1,0 +1,60 @@
+<div class="container">
+
+  <h2 class="mb-4">Modifier un produit</h2>
+
+  <form (ngSubmit)="modifierProduit()">
+
+    <div class="mb-3">
+      <label class="form-label">ID Produit</label>
+      <input
+        type="number"
+        class="form-control"
+        [(ngModel)]="id"
+        name="id"
+        readonly>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Nom du produit</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="nom"
+        name="nom"
+        required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Prix</label>
+      <input
+        type="number"
+        class="form-control"
+        [(ngModel)]="prix"
+        name="prix"
+        required>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">Date de création</label>
+      <input
+        type="date"
+        class="form-control"
+        [(ngModel)]="dateCreation"
+        name="dateCreation"
+        required>
+    </div>
+
+    <button type="submit" class="btn btn-warning">
+      Modifier
+    </button>
+
+    <button
+      type="button"
+      class="btn btn-secondary ms-2"
+      routerLink="/produit">
+      Annuler
+    </button>
+
+  </form>
+
+</div>

@@ -1,0 +1,65 @@
+<div class="container">
+
+  <h2 class="mb-4">Liste des produits</h2>
+
+  @if (produits.length === 0) {
+
+    <p>Aucun produit trouvé</p>
+
+  } @else {
+
+    @for (produit of produits; track produit.id; let i = $index; let first = $first; let last = $last) {
+
+      <div class="card mb-3">
+
+        <div class="card-body">
+
+          <h5 class="card-title">
+            {{ i + 1 }} - {{ produit.nom }}
+          </h5>
+
+          <p class="card-text">
+            ID : {{ produit.id }}
+          </p>
+
+          <p class="card-text">
+            Prix : {{ produit.prix }} DT
+          </p>
+
+          <p class="card-text">
+            Date de création : {{ produit.dateCreation }}
+          </p>
+
+          <button
+            class="btn btn-warning"
+            [routerLink]="['/modifier-produit', produit.id]">
+            Modifier
+          </button>
+
+          <button
+            class="btn btn-danger ms-2"
+            (click)="supprimerProduit(produit.id)">
+            Supprimer
+          </button>
+
+          @if (first) {
+            <span class="badge bg-success ms-2">
+              Premier produit
+            </span>
+          }
+
+          @if (last) {
+            <span class="badge bg-danger ms-2">
+              Dernier produit
+            </span>
+          }
+
+        </div>
+
+      </div>
+
+    }
+
+  }
+
+</div>
